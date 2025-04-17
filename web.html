@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdellah Akli - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #198181;
+            --secondary: #72396e;
+            --light: #fafadad6;
+            --dark: #242121;
+            --accent: #ffcccb;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(140deg, var(--primary), var(--secondary));
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: rgba(50, 43, 57, 0.85);
+            padding: 0.5rem 1rem;  /* Reduced padding */
+            text-align: center;
+            margin-bottom: 1rem;  /* Added space below header */
+        }
+        
+        h1 {
+            margin: 0.5rem 0;  /* Reduced margin */
+            font-size: 1.8rem;  /* Slightly smaller font */
+            letter-spacing: 1px;  /* Reduced letter spacing */
+        }
+        .underlined {
+    text-decoration: underline;
+    text-decoration-color: #217c7c; /* Your accent color */
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+        
+        header p {
+            margin: 0.3rem 0;  /* Reduced margin */
+            font-size: 1rem;  /* Smaller subtitle */
+        }
+        
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 1rem auto;  /* Reduced top margin */
+            padding: 0 2rem;
+            width: 90%;
+        }
+        
+        section {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background: rgba(44, 34, 56, 0.8);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            header p {
+                font-size: 0.9rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Abdellah Akli</h1>
+        <p> <span class="underlined">Developer Portfolio</span> .</p>
+
+
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio website. I'm a developer and graphic desiner passionate about creating efficient and elegant solutions. Here you'll find my work and ways to contact me.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact me via the following platforms:</p>
+            
+            <div class="contact-links">
+                <a href="https://mail.google.com/mail/?view=cm&to=akliabdallah452@gmail.com">
+                    <i class="fas fa-envelope"></i> Gmail
+                </a>
+                <a href="https://github.com/abdellahAk1" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        &copy; 2025. All rights reserved.
+    </footer>
+</body>
+</html>
