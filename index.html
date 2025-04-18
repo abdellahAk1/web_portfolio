@@ -1,377 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdellah's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="logo.webp">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #198181;
-            --secondary: #72396e;
-            --light: #fafadad6;
-            --dark: #242121;
-            --accent: #ffcccb;
-            --glass: rgba(255, 255, 255, 0.1);
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #72396e 0%, #198181 100%);
-            color: var(--light);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        header {
-            background: rgba(36, 33, 33, 0.8);
-            padding: 0.5rem 1rem;
-            text-align: center;
-            margin-bottom: 1rem;
-        
-        }
-        
-        h1 {
-            margin: 0.5rem 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            background: linear-gradient(to right, var(--accent), var(--light));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-       
-        h2 {
-            color: var(--accent);
-            margin-top: 0;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.5rem;
-            padding-left: 5px;
-        }
-    
-   
-        
-        header p {
-            margin: 0.3rem 0;
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        main {
-            flex: 1;
-            max-width: 1000px;
-            margin: 1rem auto;
-            padding: 0 2rem;
-            width: 90%;
-        }
-        
-        section {
-            background: rgba(36, 33, 33, 0.6);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        section p{
-            font-size: 17px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdellah's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="logo.webp" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    :root {
+      --primary: #198181;
+      --secondary: #72396e;
+      --light: #fafadad6;
+      --dark: #242121;
+      --accent: #ffcccb;
+      --glass: rgba(255, 255, 255, 0.1);
+    }
 
-        }
-        h2 {
-            color: var(--accent);
-            margin-top: 0;
-            position: relative;
-            padding-bottom: 0.5rem;
-            font-size:  27px;
-        }
-        .underlined {
-    text-decoration: underline;
-    text-decoration-color: #426388; /* Your accent color */
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;}
-    
-        
-        /* Projects Section */
-        .project {
-            margin-bottom: 2rem;
-        }
-        
-        .project-title {
-            color: rgb(129, 178, 199);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-            
-            text-decoration: underline;
-            text-decoration-color: #426388; /* Your accent color */
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
-        }
-        
-        .project-description {
-            margin-bottom: 1.5rem;
-            font-size: 18px;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--light);
-            text-decoration: none;
-            padding: 0.7rem 1.2rem;
-            border-radius: 8px;
-            background: linear-gradient(45deg, rgba(25, 129, 129, 0.3), rgba(114, 57, 110, 0.3));
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .project-link:hover {
-            background: linear-gradient(45deg, rgba(25, 129, 129, 0.5), rgba(114, 57, 110, 0.5));
-            transform: translateY(-3px);
-        }
-        
-        /* Design Gallery */
-        
-        
-        .design-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.design-item {
-    /* Keep your existing container styles */
-    aspect-ratio: 16/9;
-    border-radius: 8px;
-    overflow: hidden;
-    background: rgb(45, 63, 69); /* Match this to your --dark color (or any desired bg) */
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #72396e 0%, #198181 100%);
+      color: var(--light);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-.design-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down; /* Shows full image without whitespace */
-    object-position: center;
-}
-        
-        .design-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* Modal for zoomed image */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: auto;
-        }
-        
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        
-        .close:hover {
-            color: var(--accent);
-        }
-        
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-        
-        .contact-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            background: linear-gradient(45deg, rgba(25, 129, 129, 0.3), rgba(114, 57, 110, 0.3));
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .contact-links a:hover {
-            background: linear-gradient(45deg, rgba(25, 129, 129, 0.5), rgba(114, 57, 110, 0.5));
-            transform: translateY(-3px);
-        }
-        
-        footer {
-            background: rgba(36, 33, 33, 0.8);
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: auto;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        @media (max-width: 768px) {
-            .design-gallery {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .project-links, .contact-links {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .design-gallery {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    header {
+      background: rgba(36, 33, 33, 0.8);
+      padding: 0.5rem 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      background: linear-gradient(to right, var(--accent), var(--light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-top: 0;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      padding-left: 5px;
+      font-size: 27px;
+    }
+
+    header p {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 1rem auto;
+      padding: 0 2rem;
+      width: 90%;
+    }
+
+    section {
+      background: rgba(36, 33, 33, 0.6);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    section p {
+      font-size: 17px;
+    }
+
+    .underlined {
+      text-decoration: underline;
+      text-decoration-color: #426388;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .project {
+      margin-bottom: 2rem;
+    }
+
+    .project-title {
+      color: rgb(129, 178, 199);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      text-decoration: underline;
+      text-decoration-color: #426388;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .project-description {
+      margin-bottom: 1.5rem;
+      font-size: 18px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--light);
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      background: linear-gradient(45deg, rgba(25, 129, 129, 0.3), rgba(114, 57, 110, 0.3));
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project-link:hover {
+      background: linear-gradient(45deg, rgba(25, 129, 129, 0.5), rgba(114, 57, 110, 0.5));
+      transform: translateY(-3px);
+    }
+
+    .design-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .design-item {
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgb(45, 63, 69);
+    }
+
+    .design-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+      object-position: center;
+    }
+
+    .design-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow: auto;
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: var(--accent);
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      background: linear-gradient(45deg, rgba(25, 129, 129, 0.3), rgba(114, 57, 110, 0.3));
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-links a:hover {
+      background: linear-gradient(45deg, rgba(25, 129, 129, 0.5), rgba(114, 57, 110, 0.5));
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: rgba(36, 33, 33, 0.8);
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: auto;
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .design-gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project-links,
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .design-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      .project-description {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Abdellah Akli</h1>
-        <p><span class="underlined">Developer Portfolio</span></p>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio website. I'm a developer and graphic designer passionate about creating efficient and elegant solutions.</p>
-        </section>
-        
-        <section id="projects">
-            <h2>   My Projects</h2>
-            
-            <!-- Graphic Design Projects -->
-            <div class="project">
-                <h3 class="project-title">Graphic Design Projects:</h3>
-                <p class="project-description">Some of my visual design collection (click to zoom)</p>
-                
-                <div class="design-gallery">
-                    <div class="design-item">
-                        <img src="img1.jpg" alt="Logo Design" onclick="openModal(this)">
-                    </div>
-                    <div class="design-item">
-                        <img src="img2.jpg" alt="Poster Design" onclick="openModal(this)">
-                    </div>
-                    <div class="design-item">
-                        <img src="img3.jpg" alt="Brand Identity" onclick="openModal(this)">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- C Game Project -->
-            <div class="project">
-                <h3 class="project-title">Number Guess Game:</h3>
-                <p class="project-description">Guess a number and let's see if it matches the one the programe choosed!, written in C.</p>
-                
-                <div class="project-links">
-                    <a href="https://github.com/abdellahAk1/Guess-Number-Game" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-            
-            <!-- C Crypto Program -->
-            <div class="project">
-                <h3 class="project-title">Text Cryptation:</h3>
-                <p class="project-description">Use this program to make or read an Encrypted text using a specific key, written in C.</p>
-                
-                <div class="project-links">
-                    <a href="https://github.com/abdellahAk1/text-crypto" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out through these platforms:</p>
-            
-            <div class="contact-links">
-                <a href="https://mail.google.com/mail/?view=cm&to=akliabdallah452@gmail.com">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="https://github.com/abdellahAk1" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Modal for zoomed images -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-    
-    <footer>
-        &copy; <span id="year"></span> Abdellah Akli. All rights reserved.
-    </footer>
+  <header>
+    <h1>Abdellah Akli</h1>
+    <p><span class="underlined">Developer Portfolio</span></p>
+  </header>
 
-    <script>
-        // Update copyright year automatically
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Image modal functionality
-        function openModal(img) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        }
-        
-        function closeModal() {
-            document.getElementById('imageModal').style.display = "none";
-        }
-        
-        // Close modal when clicking outside the image
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my portfolio website. I'm a developer and graphic designer
+        passionate about creating efficient and elegant solutions.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+
+      <div class="project">
+        <h3 class="project-title">Graphic Design Projects:</h3>
+        <p class="project-description">
+          Some of my visual design collection (click to zoom)
+        </p>
+
+        <div class="design-gallery">
+          <div class="design-item">
+            <img src="img1.jpg" alt="Logo Design" onclick="openModal(this)" />
+          </div>
+          <div class="design-item">
+            <img src="img2.jpg" alt="Poster Design" onclick="openModal(this)" />
+          </div>
+          <div class="design-item">
+            <img src="img3.jpg" alt="Brand Identity" onclick="openModal(this)" />
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Number Guess Game:</h3>
+        <p class="project-description">
+          Guess a number and let's see if it matches the one the program
+          chooses! Written in C.
+        </p>
+        <div class="project-links">
+          <a
+            href="https://github.com/abdellahAk1/Guess-Number-Game"
+            class="project-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Text Cryptation:</h3>
+        <p class="project-description">
+          Use this program to make or read an Encrypted text using a specific
+          key, written in C.
+        </p>
+        <div class="project-links">
+          <a
+            href="https://github.com/abdellahAk1/text-crypto"
+            class="project-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out through these platforms:</p>
+      <div class="contact-links">
+        <a href="https://mail.google.com/mail/?view=cm&to=akliabdallah452@gmail.com">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://github.com/abdellahAk1" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> Abdellah Akli. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openModal(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("imageModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
